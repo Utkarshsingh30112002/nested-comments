@@ -22,7 +22,7 @@ const Input = ({id,setComments,comments,setReply}) => {
   return (
     <>
     <form  onSubmit={submit}>
-    <input placeholder='inter new comment' value={input} onChange={(e)=>setInput(e.target.value)}/>
+    <input className='border-2 border-black' placeholder='inter new comment' value={input} onChange={(e)=>setInput(e.target.value)}/>
     </form>
     </>
   )

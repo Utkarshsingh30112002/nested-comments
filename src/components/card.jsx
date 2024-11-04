@@ -8,9 +8,9 @@ const Card = ({curr,comments,setComments}) => {
   return (
     <>
    <h4>{curr.text}</h4>
-    <div>
-            {reply?<Input id={curr.id} setComments={setComments} comments={comments} data={comments} setReply={setReply}/>:<button onClick={()=>setReply(true)}>reply</button>}
-            <button onClick={()=>{
+    <div className='m-5'>
+            {reply?<Input id={curr.id} setComments={setComments} comments={comments} data={comments} setReply={setReply}/>:<button className='p-1 bg-slate-300' onClick={()=>setReply(true)}>reply</button>}
+            <button className='p-1 bg-slate-300 mx-2' onClick={()=>{
               comments=del(curr.id,comments)
               setComments([...comments])
             }
